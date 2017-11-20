@@ -1,0 +1,62 @@
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h1 class="white-text center header light">Ajuda</h1>
+      <div class="row center">
+        <h5 class="white-text header col s12 light">Após o preenchimento e envio do formulário, um arquivo <em>odt</em> (texto do
+          <strong><a class="white-text" href="http://www.libreoffice.org">LibreOffice</a></strong>) contendo todos os
+          certificados gerados será enviado para que você faça o download.</h5>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="img/background_help.jpg" alt="background img 1"></div>
+</div>
+
+<br>
+<div class="container">
+  <h3 class="light">Preenchendo o formulário</h3>
+
+  <dl>
+    <dt><strong>Variáveis</strong></dt>
+
+    <dd>As variáveis são os dados que variam no modelo. Supondo que em seu
+      certificado os dados que variam sejam o nome do participante e a palestra da
+      qual ele participou, as variáveis serão <strong>participante</strong> e
+      <strong>palestra</strong>. As variáveis devem estar <strong>separadas por
+      espaço</strong> e a ordem deve seguir a ordem das colunas do arquivo fornecido
+      no item Dados.
+    </dd>
+
+    <dt><strong>Modelo</strong></dt>
+
+    <dd>Este é um arquivo <em>odt</em> (texto do
+      <a href="http://www.libreoffice.org">LibreOffice</a>) e servirá como modelo para
+      a geração dos certificados. Ele deve ter uma seção<sup>1</sup> chamada
+      CERTIFICADOS. Dentro desta seção, devem ser inseridas as variáveis - por exemplo
+      [PARTICIPANTE], [PALESTRA]<sup>2</sup>. Veja um
+      <a href="<%= url('/modelo-exemplo.odt') %>">exemplo de modelo</a>.
+    </dd>
+
+    <dt><strong>Dados</strong></dt>
+
+    <dd>Este é um arquivo <em>xls</em> (tabela do Excel) ou um arquivo <em>ods</em>
+      (tabela do <a href="http://www.libreoffice.org">LibreOffice</a>) e irá conter
+      os dados que serão substituídos no lugar das variáveis. Cada coluna representa
+      uma variável e cada linha representa os dados de um certificado a ser gerado.
+      Veja um <a href="<%= url('/dados-exemplo.xls') %>">exemplo de dados</a>.
+    </dd>
+
+    <dt><strong>Nome</strong></dt>
+
+    <dd>Este será o nome do arquivo <em>odt</em> gerado com todos os certificados.
+      Caso não seja dado nenhum nome, o nome do arquivo será <em>certificados</em>.
+    </dd>
+
+  </dl>
+
+  <p><sup>1</sup> Para adicionar uma seção, vá no menu Inserir -> Seção.
+    <br>
+    <sup>2</sup> O nome da seção e das variáveis devem estar em letras MAIÚSCULAS, sendo que
+    as variáveis devem estar ente [COLCHETES].</p>
+</div>

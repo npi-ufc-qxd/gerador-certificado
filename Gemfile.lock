@@ -1,0 +1,44 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    daemons (1.1.9)
+    eventmachine (1.0.0)
+    nokogiri (1.5.5)
+    odf-report (0.4.4)
+      nokogiri (~> 1.5.0)
+      rubyzip (~> 0.9.4)
+    rack (1.4.1)
+    rack-protection (1.2.0)
+      rack
+    ruby-ole (1.2.11.4)
+    rubyzip (0.9.9)
+    sinatra (1.3.3)
+      rack (~> 1.3, >= 1.3.6)
+      rack-protection (~> 1.2)
+      tilt (~> 1.3, >= 1.3.3)
+    spreadsheet (0.7.3)
+      ruby-ole (>= 1.0)
+    thin (1.5.0)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+    tilt (1.3.3)
+    yalab-ruby-ods (0.0.0)
+      nokogiri (>= 1.4.0)
+      rubyzip (>= 0.9.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  odf-report (~> 0.4.4)
+  sinatra (~> 1.3.3)
+  spreadsheet (~> 0.7.3)
+  thin (~> 1.5.0)
+  yalab-ruby-ods (~> 0.0.0)
+
+RUBY VERSION
+   ruby 1.9.2p330
+
+BUNDLED WITH
+   1.14.6

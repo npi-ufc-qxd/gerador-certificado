@@ -1,0 +1,74 @@
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h1 class="white-text center header light">Gerar Certificado</h1>
+      <div class="row center">
+        <h5 class="white-text header col s12 light">Utilize o formulário abaixo para gerar seus certificados, qualquer dúvida, acesse a página de Ajuda no menu acima.</h5>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="img/background_index.jpg" alt="background img 1"></div>
+</div>
+
+<br>
+
+<div class="container">
+
+  <% if !@errors.empty? %>
+      <div class="row">
+        <% @errors.each do |error| %>
+            <div class="chip red white-text">
+              <%= error %>
+              <i class="close material-icons">close</i>
+            </div>
+        <% end %>
+      </div>
+  <% end %>
+
+  <form class='form-horizontal' action='/' method='POST' enctype='multipart/form-data'>
+    <div class="row">
+      <div class='input-field file-field col s6'>
+        <div class='btn blue-grey '>
+          <span>Arquivo de Modelo</span>
+          <input type='file' name='modelo'>
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path" type="text" placeholder="Arquivo modelo do certificado (.odt)">
+        </div>
+      </div>
+
+      <div class='input-field file-field col s6'>
+        <div class='btn blue-grey '>
+          <span>Arquivo de Dados</span>
+          <input type='file' name='dados'>
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path" type="text" placeholder="Planilha com os dados (.xls ou .ods)">
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class='input-field blue-grey-text'>
+      <input type='text' name='variaveis' class="" placeholder="Digite as variáveis separadas por espaço. (Ex.: palestra aluno data)">
+      <label for='variaveis' class="active blue-grey-text">Variáveis *</label>
+    </div>
+
+
+    <div class='input-field blue-grey-text'>
+      <input type='text' name='nome' placeholder="Nome do arquivo final">
+      <label class='active blue-grey-text' for='nome'>Nome</label>
+      <small class="blue-grey-text darken-3">
+          Nome do arquivo que será gerado com todos os certificados. Caso não seja preenchido, o padrão será <strong>certificados</strong>
+        </small>
+
+    </div>
+
+    <div class='input-field center-align'>
+      <button type='submit' class='btn btn-large btn-primary blue-grey darken-4'>Gerar Certificados</button>
+    </div>
+    <br>
+  </form>
+</div>

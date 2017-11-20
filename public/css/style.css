@@ -1,0 +1,32 @@
+img.logo {
+    float:left;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+footer {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 27px;
+    border-bottom: 1px solid #EEE;
+}
+h3 {
+    border-bottom: 1px solid #EEE;
+}
+
+sup {
+    font-weight: bold;
+    color: red;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #607d8b;
+    box-shadow: 0 1px 0 0 #607d8b;
+}
+
+a{
+    color:#607d8b;
+}

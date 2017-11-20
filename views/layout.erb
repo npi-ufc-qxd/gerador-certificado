@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Gerador de Certificados</title>
+
+  <meta name="description" content="App para gerar certificados baseados em um modelo odt (texto do LibreOffice) pegando os dados de um arquivo xls (tabela do Excel)">
+  <meta name="author" content="Hugo Maia Vieira">
+  <meta name="author" content="Zarathon Lopes Viana">
+  <meta http-equiv="Content-Language" content="pt-br">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+<nav class="blue-grey" role="navigation">
+  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">
+    <img class="logo" width="40" height="40" src="img/certificate.png" alt="Logo"/>
+    Gerador de Certificados
+  </a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/">Início</a></li>
+      <li><a href="<%= url('ajuda') %>">Ajuda</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav">
+      <li><a href="/">Início</a></li>
+      <li><a href="<%= url('ajuda') %>">Ajuda</a></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
+
+<div class="container-fluid">
+
+  <%= yield %>
+
+</div> <!-- /container -->
+
+<footer class="page-footer blue-grey">
+  <div class="container">
+    <div class="row">
+      <p class="white-text ">
+        <a class="white-text" target="_black" href="http://github.com/npi-ufc-qxd">NPI UFC Quixadá
+        <%= Date.today.year %></a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container white-text" >
+      Originalmente desenvolvido por <a class="white-text" target="_black" href="http://github.com/hugomaiavieira">Hugo Maia Vieira</a>
+    </div>
+  </div>
+</footer>
+
+
+<!--  Scripts-->
+<script defer src="http://sawpf.com/1.0.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+
+</body>
+</html>
